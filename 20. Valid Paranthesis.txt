@@ -1,0 +1,32 @@
+'''
+20. Valid Parentheses
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+An input string is valid if:
+
+Open brackets must be closed by the same type of brackets.
+Open brackets must be closed in the correct order.
+Every close bracket has a corresponding open bracket of the same type.
+
+'''
+
+
+
+class Solution:
+    def isValid(self, s: str) -> bool:
+        openl = ['(','{','[']
+        close = [')','}',']']
+        stack = []
+        for i in s:
+            if i in openl:
+                stack.append(i)
+            elif i in close:
+                ind = close.index(i)
+                if len(stack)>0 and stack[len(stack)-1]==openl[ind]:
+                    stack.pop()
+                else:
+                    return False
+        if len(stack)==0:
+            return True
+        else:
+            return False
