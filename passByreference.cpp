@@ -1,3 +1,7 @@
+
+//pass by reference is not availabe in c
+
+
 #include<iostream>
 using namespace std;
 
