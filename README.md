@@ -1,4 +1,4 @@
 # Coding
 
-Here you will find the solution of the leetcode questions..//
-Leetcode Solutions ......
+Here you will find the solution of the leetcode questions..
+
